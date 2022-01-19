@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Blank
@@ -17,4 +17,36 @@
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
-</ion-content>
+</ion-content> -->
+<div class="container">
+  <div class="forms">
+    <form action="">
+      <label for="">Name</label><br />
+      <input type="text" #names required /><br /><br />
+
+      <label for="">Email</label><br />
+      <input type="email" #emails required /><br /><br />
+      <label for="">Password</label><br />
+      <input type="password" #pass required /> <br />
+      <br />
+      <button (click)="sendData(names.value,emails.value,pass.value)">
+        Send data
+      </button>
+      <button (click)="getData()">Get data</button>
+    </form>
+  </div>
+  <div class="tables">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+      <tr>
+        <td>{{newName}}</td>
+        <td>{{newEmail}}</td>
+        <td>{{newPass}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
